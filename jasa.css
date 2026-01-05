@@ -1,0 +1,379 @@
+/* Pengaturan Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header & Nav */
+header {
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo span {
+  color: #007bff;
+}
+
+.btn-wa {
+  background: #25d366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  background: white;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+}
+
+.btn-secondary {
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.featured {
+  border: 2px solid #007bff;
+  background: #eef6ff;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #007bff;
+}
+
+.card ul {
+  list-style: none;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+.btn-card {
+  display: block;
+  background: #333;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+/* Styling Portofolio */
+.portfolio {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.portfolio-card {
+  text-decoration: none; /* Menghilangkan garis bawah link */
+  color: inherit;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px); /* Efek naik saat kursor di atasnya */
+}
+
+.portfolio-img {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Efek Overlay saat di-hover */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.8); /* Warna biru transparan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+.portfolio-info h4 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.portfolio-info p {
+  font-size: 14px;
+  color: #777;
+}
+/* --- RESPONSIVE DESIGN (UNTUK HP) --- */
+
+@media (max-width: 768px) {
+  /* Header & Nav */
+  header .container {
+    flex-direction: column; /* Logo dan tombol WA jadi susun atas bawah */
+    gap: 15px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 28px; /* Kecilkan ukuran judul di HP */
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-direction: column; /* Tombol jadi susun vertikal */
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%; /* Tombol memenuhi lebar layar */
+    margin: 0;
+  }
+
+  /* Pricing & Portfolio */
+  .pricing .container,
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Paksa jadi 1 kolom saja */
+    padding: 0 10px;
+  }
+
+  .card.featured {
+    transform: scale(1); /* Hilangkan efek pembesaran agar tidak terpotong */
+    border: 2px solid #007bff;
+  }
+
+  .portfolio-img {
+    height: 180px; /* Sesuaikan tinggi gambar di HP */
+  }
+}
+/* --- FOOTER STYLING --- */
+.main-footer {
+  background-color: #1a1a1a; /* Warna gelap elegan */
+  color: #ffffff;
+  padding: 80px 0 0 0;
+  margin-top: 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr; /* Lebar kolom bervariasi */
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 25px;
+  position: relative;
+  color: #007bff; /* Warna aksen biru */
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bbbbbb;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 5px; /* Efek geser saat hover */
+}
+
+/* Sosial Media Icons */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: #333;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #007bff;
+  transform: translateY(-3px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background: #111111;
+  padding: 25px 0;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #777;
+}
+
+/* --- RESPONSIVE FOOTER (HP) --- */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* Jadi satu kolom semua di HP */
+    text-align: center;
+  }
+
+  .footer-col h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links {
+    justify-content: center;
+    display: flex;
+  }
+}
