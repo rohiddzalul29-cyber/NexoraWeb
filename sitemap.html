@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitemap — Nexora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --white: #f8fbff;
+        --blue-light: #a9d6ff;
+        --blue-mid: #4fa8e8;
+        --blue-deep: #1a3a5c;
+        --blue-dark: #0d2237;
+        --text-dark: #0d1b2a;
+        --text-mid: #3a5270;
+        --text-light: #7ba3c4;
+        --glass-border: rgba(169, 214, 255, 0.35);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--white);
+        color: var(--text-dark);
+        line-height: 1.7;
+      }
+      .topbar {
+        position: sticky;
+        top: 0;
+        background: rgba(248, 251, 255, 0.9);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--glass-border);
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 10;
+      }
+      .topbar a.logo {
+        font-family: "Syne", sans-serif;
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: var(--text-dark);
+        text-decoration: none;
+      }
+      .topbar a.logo span {
+        color: var(--blue-mid);
+      }
+      .topbar a.back {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--blue-mid);
+        text-decoration: none;
+      }
+      .topbar a.back:hover {
+        text-decoration: underline;
+      }
+      main {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 64px 24px 100px;
+      }
+      h1 {
+        font-family: "Syne", sans-serif;
+        font-weight: 800;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+      }
+      .lead {
+        color: var(--text-mid);
+        margin-bottom: 48px;
+        font-size: 0.96rem;
+        max-width: 540px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 32px;
+      }
+      .col-title {
+        font-family: "Syne", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--blue-deep);
+        margin-bottom: 14px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--glass-border);
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a.link {
+        color: var(--text-mid);
+        text-decoration: none;
+        font-size: 0.92rem;
+        transition: color 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      a.link:hover {
+        color: var(--blue-mid);
+      }
+      a.link::before {
+        content: "→";
+        color: var(--blue-light);
+        font-size: 0.85rem;
+      }
+      footer.mini {
+        text-align: center;
+        padding: 32px 24px;
+        font-size: 0.8rem;
+        color: var(--text-light);
+        border-top: 1px solid var(--glass-border);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <a class="logo" href="index.html">Ne<span>x</span>ora</a>
+      <a class="back" href="index.html">&larr; Kembali ke Beranda</a>
+    </div>
+
+    <main>
+      <h1>Sitemap</h1>
+      <p class="lead">
+        Daftar lengkap halaman dan bagian dari website Nexora untuk
+        membantu Anda menemukan informasi dengan lebih mudah.
+      </p>
+
+      <div class="grid">
+        <div>
+          <div class="col-title">Halaman Utama</div>
+          <ul>
+            <li><a class="link" href="index.html#hero">Beranda</a></li>
+            <li><a class="link" href="index.html#about">Tentang Kami</a></li>
+            <li><a class="link" href="index.html#kenapa-website">Kenapa Butuh Website</a></li>
+            <li><a class="link" href="index.html#layanan">Layanan</a></li>
+            <li><a class="link" href="index.html#harga">Harga</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-title">Eksplorasi</div>
+          <ul>
+            <li><a class="link" href="index.html#portofolio">Portofolio</a></li>
+            <li><a class="link" href="index.html#testimoni">Testimoni</a></li>
+            <li><a class="link" href="index.html#faq">FAQ</a></li>
+            <li><a class="link" href="index.html#cta">Mulai Proyek</a></li>
+            <li><a class="link" href="index.html#kontak">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-title">Layanan Kami</div>
+          <ul>
+            <li><a class="link" href="index.html#layanan">Website UMKM</a></li>
+            <li><a class="link" href="index.html#layanan">Company Profile</a></li>
+            <li><a class="link" href="index.html#layanan">Website Portofolio</a></li>
+            <li><a class="link" href="index.html#layanan">Landing Page</a></li>
+            <li><a class="link" href="index.html#layanan">Personal Brand</a></li>
+            <li><a class="link" href="index.html#layanan">Maintenance</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-title">Legal</div>
+          <ul>
+            <li><a class="link" href="kebijakan-privasi.html">Kebijakan Privasi</a></li>
+            <li><a class="link" href="syarat-layanan.html">Syarat Layanan</a></li>
+            <li><a class="link" href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mini">© 2025 Nexora. Seluruh hak cipta dilindungi.</footer>
+  </body>
+</html>
